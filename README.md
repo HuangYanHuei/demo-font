@@ -8,12 +8,16 @@
 
 [本專案協同後端](https://github.com/HuangYanHuei/demo-back)
 
+首頁
 <img src="https://github.com/HuangYanHuei/demo-font/blob/master/public/demo1.png" width=300/>
 <br>
+餐廳
 <img src="https://github.com/HuangYanHuei/demo-font/blob/master/public/demo2.png" width=300/>
 <br>
+訂單
 <img src="https://github.com/HuangYanHuei/demo-font/blob/master/public/demo3.png" width=300/>
 <br>
+購物車
 <img src="https://github.com/HuangYanHuei/demo-font/blob/master/public/demo4.png" width=300/>
 
 
