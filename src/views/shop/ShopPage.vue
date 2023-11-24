@@ -8,11 +8,11 @@
         <span class="search__content__icon">
           <font-awesome-icon :icon="['fas', 'magnifying-glass']" class="awesomeicon" />
         </span>
-        <input class="search__content__input" placeholder="請輸入產品名稱搜尋" />
+        <input class="search__content__input" placeholder="請輸入產品名稱搜尋" v-model="inputValue"/>
       </div>
     </div>
     <ShopInfo :item="restaurantData" :hideBorder="true"/>
-    <ContentPage :restaurantData="restaurantData" :productcategoriesData="productcategoriesData"/>
+    <ContentPage :restaurantData="restaurantData" :productcategoriesData="productcategoriesData" :inputValue="inputValue"/>
     <CartPage/>
   </div>
 </template>
@@ -61,12 +61,12 @@ export default {
   name: 'ShopPage',
   components: { ShopInfo, CartPage, ContentPage },
   setup () {
+    const inputValue = ref('')
     const { restaurantData, getItemData, productcategoriesData } = useShopInfoEffect()
     const { handleBackClick } = useBackRouterEffect()
-
     getItemData()
 
-    return { handleBackClick, restaurantData, productcategoriesData }
+    return { handleBackClick, restaurantData, productcategoriesData, inputValue }
   }
 }
 </script>

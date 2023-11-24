@@ -31,7 +31,7 @@ export default {
       { icon: 'fa-house', text: '首頁', to: { name: 'Home' } },
       { icon: 'fa-cart-shopping', text: '購物車', to: { name: 'Cart' } },
       { icon: 'fa-receipt', text: '訂單', to: { name: 'OrderList' } },
-      { icon: 'fa-user', text: '我的', to: { name: 'Home' } }
+      { icon: 'fa-user', text: '我的', to: { name: 'My' } }
     ]
     return { dockerList }
   }

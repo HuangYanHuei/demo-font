@@ -10,9 +10,7 @@
     </div>
   </router-link>
   <div class="banner">
-    <img class="banner__img"
-      src="https://png.pngtree.com/png-clipart/20210704/original/pngtree-high-end-creative-restaurant-gourmet-coupon-banner-png-image_6480006.jpg"
-      alt="">
+    <Carousel/>
   </div>
   <div class="icons">
       <router-link :to="{ name: 'Restaurants', query: { categoryId: '' } }">
@@ -30,8 +28,10 @@
 <script>
 import { useStore } from 'vuex'
 import { computed } from 'vue'
+import Carousel from '../../components/CarouselPart.vue'
 export default {
   name: 'StaticPart',
+  components: { Carousel },
   setup () {
     const store = useStore()
     const getDataFromStore = computed(() => {

@@ -46,20 +46,7 @@
 
 <script>
 import { ref } from 'vue'
-import { get } from '@/utils/request'
 import { useRouter } from 'vue-router'
-
-// 熱門搜索邏輯
-const useHardWordListEffect = () => {
-  const hotWordList = ref([])
-  const getHardwordList = async () => {
-    const result = await get('/api/shop/search/hot-words')
-    if (result?.errno === 0 && result?.data?.length > 0) {
-      hotWordList.value = result.data
-    }
-  }
-  return { hotWordList, getHardwordList }
-}
 
 export default {
   name: 'SearchPage',
@@ -97,11 +84,7 @@ export default {
       router.back()
     }
 
-    const { hotWordList, getHardwordList } = useHardWordListEffect()
-
-    getHardwordList()
-
-    return { handleSearchChange, history, handleClearHistoryClick, searchValue, handleHistoryClick, handleSearchCancelClick, hotWordList }
+    return { handleSearchChange, history, handleClearHistoryClick, searchValue, handleHistoryClick, handleSearchCancelClick }
   }
 
 }

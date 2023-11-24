@@ -96,10 +96,11 @@ export default createStore({
       state.nearbyList = payload.nearbyList
     },
     setCurrentUser (state, payload) {
-      const { id, name, email, isAdmin } = payload
+      const { id, name, email, image, isAdmin } = payload
       state.user.id = id
       state.user.name = name
       state.user.email = email
+      state.user.image = image
       state.user.isAdmin = isAdmin
     },
     changeAddressInfo (state, payload) {
@@ -190,6 +191,19 @@ export default createStore({
           context.commit('clearCartData', shopId)
           console.log('success')
         }
+      } catch (error) {
+        console.error('錯誤', error)
+      }
+    },
+    async putUserInfoData (context, payload) {
+      try {
+        const { formData } = payload
+        const id = context.state.user.id
+        if (!id) return
+        const response = await usersAPI.putUserInfo({
+          formData, id
+        })
+        if (response?.status === 200) console.log('success')
       } catch (error) {
         console.error('錯誤', error)
       }

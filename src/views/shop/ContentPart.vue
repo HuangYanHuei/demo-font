@@ -50,7 +50,7 @@ const useCartEffect = () => {
 
 export default {
   name: 'ContentPart',
-  props: ['shopName', 'restaurantData', 'productcategoriesData'],
+  props: ['shopName', 'restaurantData', 'productcategoriesData', 'inputValue'],
   setup (props) {
     const route = useRoute()
     const shopId = route.params.id
@@ -67,12 +67,22 @@ export default {
         return []
       }
 
-      if (currentTab.value === 0) {
-        return restaurantData.value.Products
+      const filteredByCategory = currentTab.value === 0
+        ? restaurantData.value.Products
+        : restaurantData.value.Products.filter(product => product.productcategoryId === currentTab.value)
+
+      if (!props.inputValue) {
+        // 如果没有 inputValue，则返回按类别过滤的产品
+        return filteredByCategory
       }
 
-      return restaurantData.value.Products.filter(
-        (product) => product.productcategoryId === currentTab.value)
+      // 使用正则表达式匹配包含输入值的任意单词
+      const inputRegex = new RegExp(`${props.inputValue}`, 'i')
+
+      // 根据类别和 inputValue 过滤产品
+      return filteredByCategory.filter(product =>
+        (inputRegex.test(product.name) || inputRegex.test(product.description))
+      )
     })
 
     const { cartList, changeCartItem } = useCartEffect()

@@ -18,6 +18,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "cart" */'../views/cartList/CartList')
   },
   {
+    path: '/my',
+    name: 'My',
+    component: () => import(/* webpackChunkName: "my" */'../views/my/MyPage')
+  },
+  {
     path: '/orderConfirmation/:id',
     name: 'OrderConfirmation',
     component: () => import(/*  webpackChunkName: "orderConfirmation" */'../views/orderConfirmation/OrderConfirmation')
@@ -66,6 +71,11 @@ const routes = [
     path: '/address',
     name: 'Address',
     component: () => import(/*  webpackChunkName: "address" */'../views/orderConfirmation/AddressPart.vue')
+  },
+  {
+    path: '/userInfo',
+    name: 'UserInfo',
+    component: () => import(/*  webpackChunkName: "userInfo" */'../views/my/UserForm.vue')
   }
 ]
 

@@ -19,7 +19,10 @@ import {
   faLocationDot,
   faMagnifyingGlass,
   faChevronLeft,
-  faCircleCheck
+  faCircleCheck,
+  faRightFromBracket,
+  faArrowRight,
+  faAddressBook
 } from '@fortawesome/free-solid-svg-icons'
 
 import {
@@ -38,7 +41,10 @@ library.add(
   faMagnifyingGlass,
   faChevronLeft,
   farCircleCheck,
-  faCircleCheck
+  faCircleCheck,
+  faRightFromBracket,
+  faArrowRight,
+  faAddressBook
 )
 
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).use(store).use(router).mount('#app')
