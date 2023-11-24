@@ -8,10 +8,16 @@
 
 [本專案協同後端](https://github.com/HuangYanHuei/demo-back)
 
-<img src="https://github.com/HuangYanHuei/demo-font/blob/master/public/demo1.png" width=300 margin:20/>
-<img src="https://github.com/HuangYanHuei/demo-font/blob/master/public/demo2.png" width=300 margin:20/>
-<img src="https://github.com/HuangYanHuei/demo-font/blob/master/public/demo3.png" width=300 margin:20/>
-<img src="https://github.com/HuangYanHuei/demo-font/blob/master/public/demo4.png" width=300 margin:20/>
+<img src="https://github.com/HuangYanHuei/demo-font/blob/master/public/demo1.png" width=300/>
+<img src="https://github.com/HuangYanHuei/demo-font/blob/master/public/demo2.png" width=300/>
+<img src="https://github.com/HuangYanHuei/demo-font/blob/master/public/demo3.png" width=300/>
+<img src="https://github.com/HuangYanHuei/demo-font/blob/master/public/demo4.png" width=300/>
+
+<style>
+  img {
+    margin: 10px; 
+  }
+</style>
 
 ## 功能
 
