@@ -20,7 +20,7 @@
           <div class="product__item__detail">
             <h4 class="product__item__title">{{ item.name }}</h4>
             <p class="product__item__price">
-              <span class="product__item__yen">&yen;</span>{{ item.price }}
+              <span class="product__item__yen">$</span>{{ item.price }}
             </p>
           </div>
           <div class="product__number">
