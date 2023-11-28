@@ -65,7 +65,7 @@ export default {
 <style scoped>
 #slide {
   position: relative;
-  max-width: 3.5rem;
+  max-width: 100%;
 }
 
 #slide img {

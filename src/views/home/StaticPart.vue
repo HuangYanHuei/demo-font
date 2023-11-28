@@ -88,13 +88,6 @@ a {
   }
 }
 
-.banner {
-  &__img {
-    width: 100%;
-    height: 1rem;
-  }
-}
-
 .icons {
   display: flex;
   margin-top: .16rem;

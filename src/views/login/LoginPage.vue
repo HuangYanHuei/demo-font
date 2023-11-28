@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <img src="http://www.dell-lee.com/imgs/vue3/user.png" alt="" class="wrapper__img">
+    <font-awesome-icon :icon="['fas', 'user']" style="color: #00aeff;" class="wrapper__img"/>
     <form action="">
       <div class="wrapper__input">
         <input class="wrapper__input__content" placeholder="請輸入信箱" v-model="email">
@@ -101,8 +101,7 @@ export default {
   &__img {
     display: block;
     margin: 0 auto .4rem auto;
-    width: .66rem;
-    height: .66rem;
+    font-size: .66rem;
   }
 
   &__input {

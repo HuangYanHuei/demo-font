@@ -217,7 +217,7 @@ export default {
       display: inline-block;
       width: .2rem;
       height: .2rem;
-      line-height: .17rem;
+      line-height: .2rem;
       border-radius: 50%;
       font-size: .12rem;
       text-align: center;
@@ -230,6 +230,7 @@ export default {
     }
 
     &__plus {
+      border: .01rem solid $btn-bgColor;
       background: $btn-bgColor;
       color: $bgColor;
       margin: 0 0 0 .05rem;
